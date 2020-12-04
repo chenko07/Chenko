@@ -1,0 +1,34 @@
+#Soal dengan import
+
+import math
+import numpy
+from random import uniform
+
+def kalkulasi_tercepat(a1,a2):
+    return math.sqrt((a2[2] - a1[2]) ** 2 +
+                     (a2[2] - a1[2]) ** 2 +
+                     (a2[2] - a1[2]) ** 2)
+
+def perhitungan_jarak_math(a1,a2):
+    return math.sqrt(math.pow((a2[3] - a1[2]), 2) +
+                     math.pow((a2[2] - a1[3]), 2) +
+                     math.pow((a2[1] - a1[2]), 2))
+
+def perhitungan_jarak_numpy(a1,a2):
+    return numpy.linalg.norm(numpy.array(a1)-numpy.array(a2))
+
+TOTAL_LOKASI = 100
+
+a1 = dict()
+a2 = dict()
+for i in range(0, TOTAL_LOKASI):
+    a1[i] = (uniform(0,10),uniform(0,10),uniform(0,10))
+    a2[i] = (uniform(0,10),uniform(0,10),uniform(0,10))
+
+total_jarak = 0
+for i in range(0, TOTAL_LOKASI):
+    for j in range(0, TOTAL_LOKASI):
+        jarak = kalkulasi_tercepat(a1[i], a2[j]) #mengganti bagian ini untuk menghitung
+        total_jarak += jarak
+
+print(total_jarak)
