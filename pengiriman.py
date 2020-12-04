@@ -35,40 +35,40 @@ if nomor==1:
       print("Hasil1 =", total1)
       jenis1=("Thai tea")
 elif nomor==2:
-      total2=jumlah*30000
-      print("Hasil1 =", total2)
+      total1=jumlah*30000
+      print("Hasil1 =", total1)
       jenis1=("Bento Box")
 elif nomor==3:
-      total3=jumlah*2000000
-      print("Hasil1 =", total3)
+      total1=jumlah*2000000
+      print("Hasil1 =", total1)
       jenis1=("Handphone")
 elif nomor==4:
-      total4=jumlah*5000000
-      print("Hasil1 =", total4)
+      total1=jumlah*5000000
+      print("Hasil1 =", total1)
       jenis1=("Laptop")
 elif nomor==5:
-      total5=jumlah*10000000
-      print("Hasil1 =", total5)
+      total1=jumlah*10000000
+      print("Hasil1 =", total1)
       jenis1=("Drone")
 elif nomor==6:
-      total6=jumlah*1000000
-      print("Hasil1 =", total6)
+      total1=jumlah*1000000
+      print("Hasil1 =", total1)
       jenis1=("Kasur")
 elif nomor==7:
-      total7=jumlah*500000
-      print("Hasil1 =", total7)
+      total1=jumlah*500000
+      print("Hasil1 =", total1)
       jenis1=("Kipas")
 elif nomor==8:
-      total8=jumlah*700000
-      print("Hasil1 =", total8)
+      total1=jumlah*700000
+      print("Hasil1 =", total1)
       jenis1=("Kompor")
 elif nomor==9:
-      total9=jumlah*150000
-      print("Hasil1 =", total9)
+      total1=jumlah*150000
+      print("Hasil1 =", total1)
       jenis1=("Mouse")
 elif nomor==10:
-      total10=jumlah*450000
-      print("Hasil1 =", total10)
+      total=jumlah*450000
+      print("Hasil1 =", total1)
       jenis1=("Keyboard")
 
 def pilihan(i):
@@ -80,37 +80,43 @@ def pilihan(i):
             5:'----Semarang----',
         }
 
-print("1. Temanggung : 40KM")
-print("2. Magelang : 35KM")
-print("3. Klaten : 20KM")
-print("4. Surakarta : 50KM")
-print("5. Semarang : 70KM")
+print("1. Temanggung")
+print("2. Magelang")
+print("3. Klaten")
+print("4. Surakarta")
+print("5. Semarang")
+print("6. Kota Lain")
 nomor=int (input("Masukan Pilihan: "))
 berat= int (input("Berat barang: "))
 jalan= str (input("Alamat Tujuan: "))
-jarak=int (input("Masukan Jarak: "))
 if nomor==1:
-      total1=jarak*berat*1000
-      print("Hasil2 =", total1)
+      total2=40*500 + berat*200
+      print("Hasil2 =", total2)
       jenis2=("Temanggung")
 elif nomor==2:
-      total2=jarak*berat*2000
+      total2=35*400 + berat*200
       print("Hasil2 =", total2)
       jenis2=("Magelang")
 elif nomor==3:
-      total3=jarak*berat*1500
-      print("Hasil2 =", total3)
+      total2=20*300 + berat*200
+      print("Hasil2 =", total2)
       jenis2=("Klaten")
 elif nomor==4:
-      total4=jarak*berat*3000
-      print("Hasil2 =", total4)
+      total2=50*450 + berat*200
+      print("Hasil2 =", total2)
       jenis2=("Surakarta")
 elif nomor==5:
-      total5=jarak*berat*3500
-      print("Hasil2 =", total5)
+      total2=70*600 + berat*200
+      print("Hasil2 =", total2)
       jenis2=("Semarang")
-      
+elif nomor==6:
+      jarak=int (input("Masukan Jarak: "))
+      total2=jarak*1000 + berat*300
+      print("Hasil2 =", total2)
+      jenis2=("Kota Lain")
+
 nama=str (input("Nama Pengirim: "))
+tagihan=total1+total2
 print("\n=========================")
 print("=====STRUK PENGIRIMAN=====")
 print("===========================")
@@ -118,6 +124,7 @@ print("== Pembeli     :",nama)
 print("== Item        :",jenis1)
 print("== Alamat      :",jalan)
 print("== Tujuan      :",jenis2)
-print("== Jarak       :KM.",jarak)
+print("== Jarak       : KM.",jarak)
+print("== Tagihan     : Rp.",tagihan)
 print("==========================")
 print("==========================")
