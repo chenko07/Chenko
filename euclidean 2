@@ -1,0 +1,9 @@
+#soal tanpa import
+
+def distance(x1, x2, y1, y2, z1, z2):
+  d = (
+      (x2-x1 )**2 + 
+      (y2-y1 )**2 + 
+      (z2-z1)**2)
+  return d
+print("Euclidean distance x - y:",distance(2,4,6,6,4,5))
